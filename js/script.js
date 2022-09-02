@@ -1,14 +1,13 @@
-let overview = document.querySelector(".overview");
-let username = "kmichaud21";
+const overview = document.querySelector(".overview");
+const username = "kmichaud21";
 
 const getData = async function () {
-    const userData = await fetch(`https://api.github.com/users/${kmichaud21}`
-    );
+    const userData = await fetch(`https://api.github.com/users/${username}`);
     const Data = await userData.json();
     displayUserInfo(data);
 };
-getData();
 
+getData();
 
 const displayUserInfo = function (data) {
     const div = document.createElement("div");

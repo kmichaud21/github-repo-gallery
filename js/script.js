@@ -2,7 +2,7 @@ let overview = document.querySelector(".overview");
 let username = "kmichaud21";
 
 const getData = async function () {
-    const userData = await fetch(`https://api.github.com/users/${username}`
+    const userData = await fetch(`https://api.github.com/users/${kmichaud21}`
     );
     const Data = await userData.json();
     displayUserInfo(data);

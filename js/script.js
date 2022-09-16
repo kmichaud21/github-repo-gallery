@@ -7,7 +7,7 @@ const viewReposButton = document.querySelector(".view-repos");
 const filterInput = document.querySelector(".filter-repos");
 
 const gitUserInfo = async function () {
-  const userInfo = await fetch(`https://api.github.com/users/${kmichaud21}`);
+  const userInfo = await fetch(`https://api.github.com/users/${username}`);
   const data = await userInfo.json();
   displayUserInfo(data);
 };
@@ -33,7 +33,7 @@ const displayUserInfo = function (data) {
 };
 
 const gitRepos = async function (username) {
-  const fetchRepos = await fetch(`https://api.github.com/users/${kmichaud21}/repos?sort=updated&per_page=100`);
+  const fetchRepos = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
   const repoData = await fetchRepos.json();
   displayRepos(repoData);
 };
@@ -109,17 +109,3 @@ filterInput.addEventListener("input", function (e) {
     }
   }
 });
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
